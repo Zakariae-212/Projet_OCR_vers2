@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>DocScan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>DocScan</h1>
+  <p>Transformez vos documents en texte</p>
+
+  <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf" hidden />
+
+  <button onclick="document.getElementById('fileInput').click()">
+    📤 Importer un fichier
+  </button>
+
+  <p id="fileName"></p>
+
+  <button id="analyzeBtn">🔍 Analyser le document</button>
+
+  <!-- 🌍 Langue détectée -->
+  <p id="languageDisplay"></p>
+
+  <!-- 📄 Texte OCR -->
+  <textarea id="resultText" placeholder="Texte extrait..." rows="10"></textarea>
+
+  <div class="actions">
+    <button id="copyBtn">📋 Copier</button>
+    <button id="downloadBtn">💾 Télécharger</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
